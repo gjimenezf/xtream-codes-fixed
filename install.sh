@@ -19,50 +19,50 @@ echo -e "${jeshile} ┌───────────────────
 echo -e "${jeshile} │   Installing Web Server   │ \e[0m"
 echo -e "${jeshile} └───────────────────────────┘ \e[0m"
 echo " "
-sudo apt-get update && apt-get upgrade -y && apt-get install htop -y
-sudo apt-get install lsb-release nscd curl php5 php5-mysql php5-cli php5-curl unzip curl libcurl3 libcurl3-dev php5-curl -y
+apt-get update && apt-get upgrade -y && apt-get install htop -y
+apt-get install lsb-release nscd curl php5 php5-mysql php5-cli php5-curl unzip curl libcurl3 libcurl3-dev php5-curl -y
 sudo apt-get update && sudo apt-get install vlc vlc-plugin-* -y && sudo apt-get install vlc browser-plugin-vlc -y
 sudo wget https://raw.githubusercontent.com/FirezYT/xtream-codes-fixed/master/youtube-dl -O /usr/local/bin/youtube-dl && chmod a+rx /usr/local/bin/youtube-dl
 sudo updatedb
 sudo apt-get update
 sudo apt-get install php5-dev php5-gd -y
-sudo apt-get install php5-geoip php5-fpm mcrypt php5-mcrypt php5enmod mcrypt -y
-sudo apt-get install apache2 apache2-mpm-prefork apache2-utils libapache2-mod-php5 libapr1 libaprutil1 libdbd-mysql-perl libdbi-perl libnet-daemon-perl libplrpc-perl libpq5 mysql-client-5.5 mysql-common mysql-server mysql-server-5.5 php5-common php5-mysql -y
-sudo apt-get install phpmyadmin -y
+apt-get install php5-geoip php5-fpm mcrypt php5-mcrypt php5enmod mcrypt -y
+apt-get install apache2 apache2-mpm-prefork apache2-utils libapache2-mod-php5 libapr1 libaprutil1 libdbd-mysql-perl libdbi-perl libnet-daemon-perl libplrpc-perl libpq5 mysql-client-5.5 mysql-common mysql-server mysql-server-5.5 php5-common php5-mysql -y
+apt-get install phpmyadmin -y
 sudo php5enmod mcrypt
-sudo service apache2 reload && service apache2 restart
+service apache2 reload && service apache2 restart
 echo " "
 echo -e "${jeshile} ┌────────────────────────────────┐ \e[0m"
 echo -e "${jeshile} │   Enable IP Forwarding Tables  │ \e[0m"
 echo -e "${jeshile} └────────────────────────────────┘ \e[0m"
 echo " "
-# Block any and all licensing servers.
+# BLOCK THE MOTHERFUCKER
 echo 1 > /proc/sys/net/ipv4/ip_forward
 sudo sysctl -w net.ipv4.ip_forward=1
 sudo sysctl -p /etc/sysctl.conf
-sudo sysctl net.ipv4.ip_forward
+sysctl net.ipv4.ip_forward
 echo " "
 echo -e "${jeshile} ┌─────────────────────────────────┐ \e[0m"
 echo -e "${jeshile} │    Blocking IP FORWARD Tables   │ \e[0m"
 echo -e "${jeshile} └─────────────────────────────────┘ \e[0m"
 echo " "
-sudo /sbin/iptables -t nat -I OUTPUT --dest 149.202.206.51/28 -j DNAT --to-destination 127.0.0.1
-sudo /sbin/iptables -t nat -I OUTPUT --dest 62.210.244.112/28 -j DNAT --to-destination 127.0.0.1
-sudo /sbin/iptables -t nat -I OUTPUT --dest xtream-codes.com/28 -j DNAT --to-destination 127.0.0.1
-sudo /sbin/iptables -t nat -I OUTPUT --dest 119.249.54.71/28 -j DNAT --to-destination 127.0.0.1
-sudo /sbin/iptables -t nat -I OUTPUT --dest 38.30.65.218/28 -j DNAT --to-destination 127.0.0.1
-sudo /sbin/iptables -t nat -I OUTPUT --dest 221.194.47.224/28 -j DNAT --to-destination 127.0.0.1
-sudo /sbin/iptables -t nat -I OUTPUT --dest 218.65.30.38/28 -j DNAT --to-destination 127.0.0.1
-sudo /sbin/iptables -t nat -I OUTPUT --dest 116.31.116.34/28 -j DNAT --to-destination 127.0.0.1
-sudo /sbin/iptables -t nat -I OUTPUT --dest 91.197.232.109/28 -j DNAT --to-destination 127.0.0.1
-sudo /sbin/iptables -t nat -I OUTPUT --dest 121.18.238.104/28 -j DNAT --to-destination 127.0.0.1
-sudo /sbin/iptables -t nat -I OUTPUT --dest 221.194.44.195/28 -j DNAT --to-destination 127.0.0.1
-sudo /sbin/iptables -t nat -I OUTPUT --dest 123.103.255.80/28 -j DNAT --to-destination 127.0.0.1
-sudo /sbin/iptables -t nat -I OUTPUT --dest 185.73.239.0/28 -j DNAT --to-destination 127.0.0.1
-sudo /sbin/iptables -t nat -I OUTPUT --dest 185.73.239.7/28 -j DNAT --to-destination 127.0.0.1
+/sbin/iptables -t nat -I OUTPUT --dest 149.202.206.51/28 -j DNAT --to-destination 127.0.0.1
+/sbin/iptables -t nat -I OUTPUT --dest 62.210.244.112/28 -j DNAT --to-destination 127.0.0.1
+/sbin/iptables -t nat -I OUTPUT --dest xtream-codes.com/28 -j DNAT --to-destination 127.0.0.1
+/sbin/iptables -t nat -I OUTPUT --dest 119.249.54.71/28 -j DNAT --to-destination 127.0.0.1
+/sbin/iptables -t nat -I OUTPUT --dest 38.30.65.218/28 -j DNAT --to-destination 127.0.0.1
+/sbin/iptables -t nat -I OUTPUT --dest 221.194.47.224/28 -j DNAT --to-destination 127.0.0.1
+/sbin/iptables -t nat -I OUTPUT --dest 218.65.30.38/28 -j DNAT --to-destination 127.0.0.1
+/sbin/iptables -t nat -I OUTPUT --dest 116.31.116.34/28 -j DNAT --to-destination 127.0.0.1
+/sbin/iptables -t nat -I OUTPUT --dest 91.197.232.109/28 -j DNAT --to-destination 127.0.0.1
+/sbin/iptables -t nat -I OUTPUT --dest 121.18.238.104/28 -j DNAT --to-destination 127.0.0.1
+/sbin/iptables -t nat -I OUTPUT --dest 221.194.44.195/28 -j DNAT --to-destination 127.0.0.1
+/sbin/iptables -t nat -I OUTPUT --dest 123.103.255.80/28 -j DNAT --to-destination 127.0.0.1
+/sbin/iptables -t nat -I OUTPUT --dest 185.73.239.0/28 -j DNAT --to-destination 127.0.0.1
+/sbin/iptables -t nat -I OUTPUT --dest 185.73.239.7/28 -j DNAT --to-destination 127.0.0.1
 echo " "
 echo -e "${jeshile} ┌─────────────────────────────┐ \e[0m"
-echo -e "${jeshile} │   Blocking SSH Connection   │ \e[0m"
+echo -e "${jeshile} │   Blocking SSH Connections  │ \e[0m"
 echo -e "${jeshile} └─────────────────────────────┘ \e[0m"
 echo " "
 sudo /sbin/iptables -I INPUT -s 119.249.54.71 -p tcp --dport ssh -j REJECT
@@ -351,76 +351,83 @@ sudo ip addr add 123.103.255.80 dev tun0
 sudo ip addr add 104.20.86.174 dev tun0
 echo " "
 echo -e "${jeshile} ┌────────────────────────────────────────────┐ \e[0m"
-echo -e "${jeshile} │  install Iptables Persistent And Open VPN  │ \e[0m"
+echo -e "${jeshile} │  Installing IPTables Addonn And Open VPN   │ \e[0m"
 echo -e "${jeshile} └────────────────────────────────────────────┘ \e[0m"
 echo " "
 sudo apt-get install iptables-persistent && apt-get install openvpn -y
 echo " "
 echo -e "${jeshile} ┌──────────────────────────────────────────┐ \e[0m"
-echo -e "${jeshile} │  Downloanding Extracting And Installing  │ \e[0m"
+echo -e "${jeshile} │  Downloading panel files and installing. │ \e[0m"
 echo -e "${jeshile} └──────────────────────────────────────────┘ \e[0m"
 echo " "
 #mkdir /var/www/html
 #cd /var/www/html #DESTINACIONI KRYESOR ADMIN - TEMPLATES ETC
 cd /var/www/html && wget http://www.dropbox.com/s/87kbjm22109u7vp/Xtream_Codes_v1.0.60_Nulled.zip && unzip Xtream_Codes_v1.0.60_Nulled.zip && cp /var/www/html/downloads/iptv_panel_pro.zip /tmp && chmod a+x /tmp/iptv_panel_pro.zip && cp /var/www/html/downloads/install_iptv_pro.php /root/ && cd /root && chmod a+x /root/install_iptv_pro.php && php install_iptv_pro.php
-sudo chmod 775 /var/www/html/Xtream_Codes_v1.0.60_Nulled.zip
-sudo rm /var/www/html/Xtream_Codes_v1.0.60_Nulled.zip
-sudo cp /var/www/html/downloads/iptv_panel_pro.zip /tmp
-sudo chmod a+x /tmp/iptv_panel_pro.zip
+chmod 775 /var/www/html/Xtream_Codes_v1.0.60_Nulled.zip
+rm /var/www/html/Xtream_Codes_v1.0.60_Nulled.zip
+cp /var/www/html/downloads/iptv_panel_pro.zip /tmp
+chmod a+x /tmp/iptv_panel_pro.zip
+#cp /var/www/html/downloads/install_iptv_pro.php /root/ #FSHIHET AUTOMATIKISHT MBAS INSTALIMIT
+#cd /root
+#chmod a+x /root/install_iptv_pro.php
+#php install_iptv_pro.php  #KJO ESHTE LULKUQJA
 echo " "
-# Replace files with the cracked version.
+#REPLACE CONFIG, ALL ORIGINAL FILES ARE BACKUP WITH END backup_by_TRC4
 echo -e "${jeshile} ┌─────────────────────────────────────────┐ \e[0m"
 echo -e "${jeshile} │  Replacing Original With Cracked Files  │ \e[0m"
 echo -e "${jeshile} └─────────────────────────────────────────┘ \e[0m"
 echo " "
-sudo cp /etc/init.d/xtreamcodes_pro_panel /etc/init.d/xtreamcodes_pro_panel_backup_by_TRC4
+cp /etc/init.d/xtreamcodes_pro_panel /etc/init.d/xtreamcodes_pro_panel_backup_by_TRC4
 echo -e "${jeshile} [+] /etc/init.d/xtreamcodes_pro_panel Backup as xtreamcodes_pro_panel_backup_by_TRC4 \e[0m"
-sudo cp /var/www/html/crack/xtreamcodes_pro_panel /etc/init.d/xtreamcodes_pro_panel
+cp /var/www/html/crack/xtreamcodes_pro_panel /etc/init.d/xtreamcodes_pro_panel
 echo -e "${jeshile} [+] New xtreamcodes_pro_panel File Coppied to /etc/init.d/xtreamcodes_pro \e[0m"
-sudo cp /etc/rc.local /etc/rc.local_backup_by_TRC4
+cp /etc/rc.local /etc/rc.local_backup_by_TRC4
 echo -e "${jeshile} [+] /etc/rc.local backuped as rc.local_backup_by_TRC4 \e[0m"
-sudo cp /var/www/html/crack/rc.local /etc/rc.local
+cp /var/www/html/crack/rc.local /etc/rc.local
 echo -e "${jeshile} [+] New rc.local File Coppied to /etc/rc.local \e[0m"
-sudo chmod +x /etc/rc.local
+chmod +x /etc/rc.local
 echo -e "${jeshile} [+] chmod +x rc.local \e[0m"
 echo " "
-# Fix the MYSQL connections
+#MYSQL CONFIG, ALL ORIGINAL FILES ARE BACKUP WITH END backup_by_TRC4
 echo -e "${jeshile} ┌──────────────────────────────┐ \e[0m"
 echo -e "${jeshile} │  Modified MYSQL Connections  │ \e[0m"
 echo -e "${jeshile} └──────────────────────────────┘ \e[0m"
 echo " "
-sudo cp /etc/mysql/my.cnf /etc/mysql/my_config.cnf_backup_by_TRC4
+cp /etc/mysql/my.cnf /etc/mysql/my_config.cnf_backup_by_TRC4
 echo -e "${jeshile} [+] /etc/mysql/my.cnf backuped as my.cnf_backup_by_TRC4 \e[0m"
 echo -e "${jeshile} [+] ORIGINAL FILE /var/www/html/crack/mysqlcnf/original \e[0m"
-sudo sed -i 's/max_connections = 5000/max_connections = 20000/g' /etc/mysql/my.cnf
+sed -i 's/max_connections = 5000/max_connections = 20000/g' /etc/mysql/my.cnf
 echo -e "${jeshile} [+] MYSQL Connections Has Been Now Modified Minimum 5000 to Maximum 20000 \e[0m"
-sudo service mysql restart
+service mysql restart
 echo " "
 echo -e "${jeshile} ┌───────────────────────┐ \e[0m"
 echo -e "${jeshile} │  Removing TEMP Files  │ \e[0m"
 echo -e "${jeshile} └───────────────────────┘ \e[0m"
 echo " "
-sudo rm /root/install_iptv_pro.php
-sudo rm /root/xtreamcodes_1.0.60_Nulled.sh
+rm /root/install_iptv_pro.php
+rm /root/xtreamcodes_1.0.60_Nulled.sh
 echo " "
-echo -e "${jeshile} ┌───────────────────────────────────────┐ \e[0m"
-echo -e "${jeshile} │    Xtream Codes 1.60 Nulled By Firez  │ \e[0m"
-echo -e "${jeshile} └───────────────────────────────────────┘ \e[0m"
-echo -e "${jeshile} ┌───────────────────────────────────────┐ \e[0m"
-echo -e "${jeshile} │[+] Installation Completed             │ \e[0m"
-echo -e "${jeshile} └───────────────────────────────────────┘ \e[0m"
-echo -e "${jeshile} ┌──────────────────────────────────────────────────────────┐ \e[0m"
-echo -e "${jeshile} │[+] Webpage: firez.uploadanime.xyz                        │ \e[0m"
-echo -e "${jeshile} └──────────────────────────────────────────────────────────┘ \e[0m"
-echo -e "${jeshile} ┌──────────────────────────────────────────────────────────┐ \e[0m"
-echo -e "${jeshile} │[+] Source: github.com/FirezYT                            │ \e[0m"
-echo -e "${jeshile} └──────────────────────────────────────────────────────────┘ \e[0m"
-echo -e "${jeshile} ┌──────────────────────────────────────────────────────────┐ \e[0m"
-echo -e "${jeshile} │[+] Go stream you, Streamers!                             │ \e[0m"
-echo -e "${jeshile} └──────────────────────────────────────────────────────────┘ \e[0m"
-echo -e "${jeshile} ┌──────────────────────────────────────────────────────────┐ \e[0m"
-echo -e "${jeshile} │[+]        Server will now reboot.                        │ \e[0m"
-echo -e "${jeshile} └──────────────────────────────────────────────────────────┘ \e[0m"
+echo -e "${jeshile} ┌───────────────────────────────────────────┐ \e[0m"
+echo -e "${jeshile} │  Xtream Codes 1.60 Nulled By Firez & TRC4 │ \e[0m"
+echo -e "${jeshile} └───────────────────────────────────────────┘ \e[0m"
+echo -e "${jeshile} ┌───────────────────────────────────────────┐ \e[0m"
+echo -e "${jeshile} │[+] Installation Completed                 │ \e[0m"
+echo -e "${jeshile} └───────────────────────────────────────────┘ \e[0m"
+echo -e "${jeshile} ┌───────────────────────────────────────────┐ \e[0m"
+echo -e "${jeshile} │[+] Discord: Firez#7353                    │ \e[0m"
+echo -e "${jeshile} └───────────────────────────────────────────┘ \e[0m"
+echo -e "${jeshile} ┌───────────────────────────────────────────┐ \e[0m"
+echo -e "${jeshile} │[+] Webpage: firez.uploadanime.xyz         │ \e[0m"
+echo -e "${jeshile} └───────────────────────────────────────────┘ \e[0m"
+echo -e "${jeshile} ┌───────────────────────────────────────────┐ \e[0m"
+echo -e "${jeshile} │[+] Source: github.com/FirezYT             │ \e[0m"
+echo -e "${jeshile} └───────────────────────────────────────────┘ \e[0m"
+echo -e "${jeshile} ┌───────────────────────────────────────────┐ \e[0m"
+echo -e "${jeshile} │[+] Happy Streaming Xtreamers!             │ \e[0m"
+echo -e "${jeshile} └───────────────────────────────────────────┘ \e[0m"
+echo -e "${jeshile} ┌────────────────────────────────────────────────┐ \e[0m"
+echo -e "${jeshile} │[+] The server must now restart.                │ \e[0m"
+echo -e "${jeshile} └────────────────────────────────────────────────┘ \e[0m"
 echo " "
 sleep 8
 reboot
