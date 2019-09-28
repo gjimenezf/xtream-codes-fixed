@@ -4,6 +4,8 @@ An English guide to install the fixed Xtream Codes panel for FREE.
 
 If you have problems, contact me on Discord @ Firez#7353 .
 
+Official nulled discord: https://discord.gg/FZJjscx
+
 ### Ubuntu 14.04 only works.
 
 ## Installation (Ubuntu / Debian)
